@@ -51,4 +51,5 @@ struct TaskListView: View {
             .navigationTitle("Smart Todo")
         }
     }
+    
 }
