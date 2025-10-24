@@ -8,17 +8,14 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @StateObject private var viewModel = TaskViewModel()
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
-        }
-        .padding()
+        TaskListView()
+            .environmentObject(viewModel)
     }
 }
 
 #Preview {
-    ContentView()
+   ContentView()
 }
